@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -42,6 +45,18 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    // Mapsforge core
+    implementation (libs.mapsforge.core)
+    implementation (libs.mapsforge.map)
+    implementation (libs.mapsforge.mapsforge.map.reader)
+    implementation (libs.mapsforge.mapsforge.themes)
+
+    // Mapsforge Android dependency
+    implementation (libs.mapsforge.mapsforge.map.android)
+    // AndroidSVG by Paul LeBeau
+    implementation (libs.androidsvg)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
