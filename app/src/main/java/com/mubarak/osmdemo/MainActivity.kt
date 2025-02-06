@@ -58,12 +58,15 @@ class MainActivity : AppCompatActivity() {
                 binding.mapView.model.mapViewPosition,
                 AndroidGraphicFactory.INSTANCE
             )
+            tileRendererLayer.cacheTileMargin = 1
+            tileRendererLayer.cacheZoomMinus = 1
+            tileRendererLayer.cacheZoomPlus = 2
             tileRendererLayer.setXmlRenderTheme(MapsforgeThemes.OSMARENDER)
 
             binding.mapView.layerManager.layers.add(tileRendererLayer)
 
-//            binding.mapView.setCenter(LatLong(52.517037, 13.38886))
-            binding.mapView.setZoomLevel(12.toByte())
+            binding.mapView.setCenter(mapDataStore.startPosition())
+            binding.mapView.setZoomLevel(mapDataStore.startZoomLevel())
         } catch (e: Exception) {
             e.printStackTrace()
         }
