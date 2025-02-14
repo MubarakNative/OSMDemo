@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">OSMDemo</string>
-    <string name="attr">Map data @OpenStreetmap</string>
+    <string name="attr">ⓒ OpenStreetMap Contributors</string>
     <string name="open_map">Open map</string>
 </resources>
